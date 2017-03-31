@@ -1,0 +1,25 @@
+
+.donut {
+  background-image: url('../svg/donut.svg');
+  background-size: 100% 100%;
+}
+.hotdog {
+  background-image: url('../svg/hotdog.svg');
+  background-size: 100% 100%;
+}
+.soda {
+  background-image: url('../svg/soda.svg');
+  background-size: 100% 100%;
+}
+.pizza {
+  background-image: url('../svg/pizza.svg');
+  background-size: 100% 100%;
+}
+.burger {
+  background-image: url('../svg/burger.svg');
+  background-size: 100% 100%;
+}
+.free {
+  background-image: url('../svg/free.svg');
+  background-size: 100% 100%;
+}

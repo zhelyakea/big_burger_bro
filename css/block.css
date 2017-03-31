@@ -1,0 +1,60 @@
+.block{
+	color: #26A69A;
+	background: white;
+	border:1px solid rgb(22, 160, 133);
+
+}
+.name{
+	transition-duration: 0.5s;
+}
+.cost{
+	transition-duration: 0.5s;
+}
+.summ{
+	transition-duration: 0.1s;
+}
+.count{
+	transition-duration: 0.5s;
+}
+.minus{
+	color: white;
+	background: #E57373;
+	border:1px solid #E57373;
+	transition-duration: 0.2s;
+}
+.plus{
+	color: white;
+	background: #26A69A;
+	border:1px solid #26A69A;
+	transition-duration: 0.3s;
+}
+.delete{
+	color: white;
+	background: #E57373;
+	border:1px solid #E57373;
+	transition-duration: 0.2s;
+}
+.selectedName{
+	background: rgb(22, 160, 133);
+	color: white;
+	border:1px solid rgb(22, 160, 133);
+	transition-duration: 0.4s;
+}
+.selectedCost{
+	background: #FFA726;
+	color: white;
+	border:1px solid rgb(241, 196, 15);
+	transition-duration: 0.3s;
+}
+.selectedCount{
+	background: rgb(241, 196, 15);
+	color: white;
+	border:1px solid #FFC400;
+	transition-duration: 0.2s;
+}
+.selectedSumm{
+	background: #0097A7;
+	color: white;
+	border:1px solid #0097A7;
+	transition-duration: 0.1s;
+}

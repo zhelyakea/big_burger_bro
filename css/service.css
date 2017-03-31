@@ -1,0 +1,34 @@
+
+.service{
+  display: inline-block;
+  width: 30%;
+  cursor: default;
+}
+.service_text{
+  display: inline-block;
+  padding: 5px;
+}
+.service_text_unactive{
+  color: #26A69A;
+  background: white;
+  border: 1px solid #26A69A;
+  transition-duration: 0.5s;
+}
+.service_name_active{
+  color: white;
+  background: #26A69A;
+  border: 1px solid #30d0c1;
+  transition-duration: 0.4s;
+}
+.service_cost_active{
+  color: white;
+  background: #FFA726;
+  border: 1px solid #ffbc59;
+  transition-duration: 0.3s;
+}
+.service_name_text{
+  width: 60%;
+}
+.service_cost_text{
+  width: 40%;
+}
