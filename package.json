@@ -1,12 +1,12 @@
 {
-  "name": "test",
+  "name": "Big_Burger_Bro",
   "version": "1.0.0",
   "description": "Redux Counter",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Zhelyak Egor",
+  "author": "Egor Zhelyak",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.9.1",

@@ -25,7 +25,6 @@ export function fetchData(id) {
       .then((data) => {
         dispatch(getDataSuccess(data))
         dispatch(toggleSelected(id))
-        console.log('sccss:', data)
       })
       .catch((err) => console.log('err:', err))
   }
