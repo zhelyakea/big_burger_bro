@@ -4,7 +4,8 @@
   "description": "Redux Counter",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "NODE_ENV=production webpack"
   },
   "author": "Egor Zhelyak",
   "license": "MIT",
@@ -21,6 +22,11 @@
     "eslint-plugin-react": "^5.1.1",
     "express": "^4.13.4",
     "npm-install-webpack-plugin": "^4.0.1",
+    "postcss": "5.2.17",
+    "postcss-cssnext": "2.10.0",
+    "postcss-loader": "1.3.3",
+    "postcss-smart-import": "0.6.12",
+    "precss": "1.4.0",
     "react-hot-loader": "^1.3.0",
     "svg-url-loader": "2.0.2",
     "universal-hot-reload": "0.5.3",
@@ -35,6 +41,7 @@
     "node-sass": "4.5.0",
     "nodemon": "1.11.0",
     "react": "^15.1.0",
+    "react-addons-css-transition-group": "15.5.2",
     "react-dom": "^15.1.0",
     "react-redux": "4.4.5",
     "react-router": "3.0.2",

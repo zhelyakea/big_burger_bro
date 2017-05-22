@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 
 export default class Service extends Component {
   render() {
-    const { index, value, fetchData } = this.props
+    const { index, value, toggleSelected } = this.props
     const id = value.id
     const selected = value.selected
     const color = value.color
@@ -13,7 +13,7 @@ export default class Service extends Component {
     const name = value.name
     return (
   		<div
-      onClick={() => fetchData(id)}
+      onTouchEnd={() => toggleSelected(id)}
       className={'service margin_5 width_100'}>
 
         <div className={name + ' shadow_box biglIcon ' + (selected ? "activeIcon" : '')}>
@@ -22,7 +22,7 @@ export default class Service extends Component {
           <div className="flex-container margin_5_0 width_100 shadow_box">
       		  <div className={'flex-item service_text flex_grow_2 ' + (selected ? "service_name_active" : 'service_text_unactive')}>{name}</div>
 
-      		  <div className={'flex-item service_text  flex_grow_1 ' + (selected ? "service_cost_active" : 'service_text_unactive')}>{cost} р</div>
+      		  <div className={'flex-item service_text  flex_grow_2 ' + (selected ? "service_cost_active" : 'service_text_unactive')}>{cost} р</div>
 	        </div>
   		</div>
   	)

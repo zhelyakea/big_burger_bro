@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { Provider } from 'react-redux'
 import configureStore from './store/configureStore'
@@ -9,7 +9,7 @@ import Services from './components/Services'
 import List from './components/List'
 
 const store = configureStore()
-const history = syncHistoryWithStore(browserHistory, store);
+const history = syncHistoryWithStore(hashHistory, store);
 
 require('../css/style.css')
 require('../css/common.css')

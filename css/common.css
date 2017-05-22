@@ -11,25 +11,26 @@
 .width_100{
   width: 100%;
 }
-.width_80{
-  width: 70%;
-	max-width: 700px;
+.height_100{
+  height: 100%;
+}
+.margin_auto{
+	margin: auto;
+}
+.height_90{
+  height: 90%;
 }
 .width_50{
   width: 50%;
 }
+.width_5{
+  width: 5%;
+}
 .padding_5{
   padding: 5px;
 }
-.padding_15{
-  padding-left: 10%;
-  padding-right: 10%;
-}
 .margin_5{
   margin: 5px;
-}
-.margin_5_2{
-  margin: 5px 2px;
 }
 .margin_5_0{
   margin: 5px 0px;

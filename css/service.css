@@ -4,10 +4,6 @@
   width: 30%;
   cursor: default;
 }
-.service_text{
-  display: inline-block;
-  padding: 5px;
-}
 .service_text_unactive{
   color: #26A69A;
   background: white;

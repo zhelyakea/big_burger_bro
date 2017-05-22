@@ -2,12 +2,9 @@ var path = require('path')
 var webpack = require('webpack')
 var NpmInstallPlugin = require('npm-install-webpack-plugin')
 
-module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+const config = {
+  devtool: 'cheap-module-source-map',
   entry: [
-    'webpack/hot/only-dev-server',
-    'webpack-dev-server/client',
-    'babel-polyfill',
     './src/index', './css/style.css'
   ],
   watch: true,
@@ -18,13 +15,17 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new NpmInstallPlugin()
+    new NpmInstallPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
   ],
   module: {
     loaders: [
       {
-        loaders: ['react-hot', 'babel-loader'],
+        loaders: ['babel-loader'],
         include: [
           path.resolve(__dirname, "src"),
         ],
@@ -33,12 +34,28 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css'
+        loaders: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          'postcss-loader'
+        ]
       },
       {
         test: /\.svg/,
         loader: 'svg-url'
       }
     ]
+  },
+  postcss: () => {
+    return [
+      require('precss'),
+      require('postcss-cssnext'),
+    ];
   }
 }
+if (process.env.NODE_ENV === 'production') {
+  config.plugins.push(
+    new webpack.optimize.UglifyJsPlugin()
+  )
+}
+module.exports = config
