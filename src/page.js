@@ -16,17 +16,17 @@ export const page = {
    '3': {
       'id': 3,
       'name': 'soda',
-      'count': 0,
+      'count': 3,
       'cost': 300,
-      'selected': false
+      'selected': true
     },
     '4': {
     	'id': 4,
       'name': 'donut',
     	'color': 'black',
-    	'count': 0,
+    	'count': 2,
     	'cost': 400,
-      'selected': false
+      'selected': true
     },
     '5': {
     	'id': 5,

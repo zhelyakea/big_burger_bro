@@ -2,7 +2,6 @@ import React, { PropTypes, Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Block from '../components/Block'
-import * as deleteAction from '../actions/DeleteAction'
 import * as pageAction from '../actions/PageAction'
 import { Link, hashHistory } from 'react-router'
 const { map, reduce } = Array.prototype
@@ -66,7 +65,6 @@ function mapStateToProps (state) {
 }
 function mapDispatchToProps(dispatch) {
   return {
-    deleteAction: bindActionCreators(deleteAction, dispatch),
     pageAction: bindActionCreators(pageAction, dispatch)
   }
 }
