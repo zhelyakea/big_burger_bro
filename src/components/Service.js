@@ -13,7 +13,7 @@ export default class Service extends Component {
     const name = value.name
     return (
   		<div
-      onTouchEnd={() => toggleSelected(id)}
+      onClick={() => toggleSelected(id)}
       className={'service margin_5 width_100'}>
 
         <div className={name + ' shadow_box biglIcon ' + (selected ? "activeIcon" : '')}>

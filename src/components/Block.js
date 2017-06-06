@@ -28,20 +28,20 @@ export default class Block extends Component {
           <div className="flex-item margin_5_2">
         		<div
               className="pressed block_text minus shadow_box"
-              onTouchEnd={() => pageFoo.countMinus(id)}>
-              -</div>
+              onClick={() => pageFoo.countMinus(id)}
+              >-</div>
       		</div>
           <div className="flex-item margin_5_2">
         		<div
               className="pressed block_text plus shadow_box"
-              onTouchEnd={() => pageFoo.countPlus(id)}>
-              +</div>
+              onClick={() => pageFoo.countPlus(id)}
+              >+</div>
       		</div>
           <div className="flex-item margin_5_2">
         		<div
               className="pressed block_text delete shadow_box"
-              onTouchEnd={() => pageFoo.blockDelete(id)}>
-              x</div>
+              onClick={() => pageFoo.blockDelete(id)}
+              >x</div>
       		</div>
     		</div>
   		</div>

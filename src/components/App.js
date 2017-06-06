@@ -45,8 +45,9 @@ class App extends Component {
 						<Link to='/services'/>
 					</header>
 		      <div className="flex-item flex_grow_1 padding_5">
-						<div onTouchEnd={() => hashHistory.push('/services')}
-							className="pressed block_text nextStyle shadow_box">
+						<div
+							onClick={() => hashHistory.push('/services')}
+							className="pressed button_nav nextStyle shadow_box">
 							Добавить услуги
 						</div>
 					</div>

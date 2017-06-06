@@ -17,7 +17,7 @@ export default class Services extends Component {
         toggleSelected = { toggleSelected }/>
 		)
 		return (
-      <div className="app width_80 padding_15 ">
+      <div className="app flex_item_column flex_container_col width_80">
 				<div className="flex_item_column justify_center scroll_height width_100 height_100">
 					<div className="scroll_height_inside width_100">
 						{container}
@@ -29,8 +29,8 @@ export default class Services extends Component {
 					</header>
 		      <div className="flex-item flex_grow_1">
 		  			<div
-							onTouchEnd={() => hashHistory.push('/')}
-							className="pressed block_text nextStyle shadow_box">Выбрать</div>
+							onClick={() => hashHistory.push('/')}
+							className="pressed button_nav nextStyle shadow_box">Выбрать</div>
 					</div>
 	      </div>
       </div>
