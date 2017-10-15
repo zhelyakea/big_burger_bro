@@ -1,7 +1,5 @@
 import React, { PropTypes, Component } from 'react'
-import { connect } from 'react-redux'
 import Service from '../../components/Service'
-import { toggleSelected } from '../../actions/PageAction'
 
 import block from "bem-cn";
 const b = block("services");
@@ -28,8 +26,8 @@ export default class Services extends Component {
 		)
 	}
 }
-Services.propTypes = {
-  page: PropTypes.object.isRequired
-}
-export default connect(
-({ page }) => ({ page }), { toggleSelected })(Services)
+// Services.propTypes = {
+//   page: PropTypes.object.isRequired
+// }
+// export default connect(
+// ({ page }) => ({ page }), { toggleSelected })(Services)

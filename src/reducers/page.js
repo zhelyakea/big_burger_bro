@@ -11,7 +11,7 @@ const initialState = page
 
 export default function count(state, action) {
 	const newstate = {...state}
-	const id = action.payload
+	const id = action.id
 
 	switch (action.type) {
 

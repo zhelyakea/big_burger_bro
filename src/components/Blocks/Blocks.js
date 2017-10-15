@@ -1,13 +1,11 @@
 import React, { PropTypes, Component } from "react";
-import { connect } from "react-redux";
-import Block from "../components/Block";
-import { countMinus, countPlus, blockDelete } from "../actions/PageAction";
+import Block from "../../components/Block";
 
 import block from "bem-cn";
-const b = block("app");
-import "./App.scss";
+const b = block("blocks");
+import "./Blocks.scss";
 
-class App extends Component {
+export default class Blocks extends Component {
   render() {
     const { page, countMinus, countPlus, blockDelete } = this.props;
 
@@ -29,17 +27,11 @@ class App extends Component {
     return (
       <div className={b}>
         <div className={b("wrapper")}>
-          <div className={b("scroll")}>{container}</div>
+          <div className={b("scroll")}>
+            {container}
+          </div>
         </div>
       </div>
     );
   }
 }
-App.propTypes = {
-  page: PropTypes.object.isRequired
-};
-export default connect(({ page }) => ({ page }), {
-  countMinus,
-  countPlus,
-  blockDelete
-})(App);

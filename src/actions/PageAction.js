@@ -5,27 +5,19 @@ import {
   TOGGLE_SELECTED
 } from '../constants/Page'
 
-export function blockDelete(id) {
-  return {
-    type: BLOCK_DELETE,
-    payload: id
-  }
-}
-export function countMinus(id) {
-  return {
-    type: COUNT_MINUS,
-    payload: id
-  }
-}
-export function countPlus(id) {
-  return {
-    type: COUNT_PLUS,
-    payload: id
-  }
-}
-export function toggleSelected(id) {
-  return {
-    type: TOGGLE_SELECTED,
-    payload: id
-  }
-}
+export const blockDelete = id => ({
+  type: BLOCK_DELETE,
+  id
+})
+export const countMinus = id => ({
+  type: COUNT_MINUS,
+  id
+})
+export const countPlus = id => ({
+  type: COUNT_PLUS,
+  id
+})
+export const toggleSelected = id => ({
+  type: TOGGLE_SELECTED,
+  id
+})

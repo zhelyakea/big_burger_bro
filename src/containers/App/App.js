@@ -1,14 +1,15 @@
 import React, { PropTypes, Component } from 'react'
 import { connect } from "react-redux";
 import { Link } from "react-router";
+import { toggleSelected, countMinus, countPlus, blockDelete } from '../../actions/PageAction'
 
 import block from "bem-cn";
-const b = block("list");
-import "./List.scss";
+const b = block("app");
+import "./App.scss";
 
-export default class List extends Component {
+export default class App extends Component {
 	render() {
-    const { children, page, location } = this.props
+    const { children, page, location, toggleSelected, countMinus, countPlus, blockDelete } = this.props
     const sum = Object.keys(page).reduce((result, id) => {
       return result + page[id].cost * page[id].count;
     }, 0);
@@ -23,7 +24,7 @@ export default class List extends Component {
 					</div>
 				</div>
 				<div className={b('content')}>
-					{children}
+          {React.cloneElement(children, { page, toggleSelected, countMinus, countPlus, blockDelete })}
 				</div>
         <div className={b('bottom-wrapper')}>
           {
@@ -50,10 +51,15 @@ export default class List extends Component {
 		)
 	}
 }
-List.propTypes = {
+App.propTypes = {
   page: PropTypes.object.isRequired
 };
 export default connect(({ page, routing }) => ({
   page,
   location: routing.locationBeforeTransitions.pathname
-}))(List);
+}), {
+  toggleSelected,
+  countMinus,
+  countPlus,
+  blockDelete
+})(App);
