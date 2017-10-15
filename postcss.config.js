@@ -3,7 +3,7 @@ module.exports = {
     require('postcss-smart-import')({ /* ...options */ }),
     require('precss')({ /* ...options */ }),
     require('postcss-cssnext')({ /* ...options */ }),
-      require("postcss-browser-reporter")(),
-      require("postcss-reporter")(),
+    require("postcss-browser-reporter")(),
+    require("postcss-reporter")(),
   ]
 }

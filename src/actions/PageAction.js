@@ -6,34 +6,26 @@ import {
 } from '../constants/Page'
 
 export function blockDelete(id) {
-  return (dispatch) => {
-    dispatch({
-      type: BLOCK_DELETE,
-      payload: id
-    })
+  return {
+    type: BLOCK_DELETE,
+    payload: id
   }
 }
 export function countMinus(id) {
-  return (dispatch) => {
-    dispatch({
-      type: COUNT_MINUS,
-      payload: id
-    })
+  return {
+    type: COUNT_MINUS,
+    payload: id
   }
 }
 export function countPlus(id) {
-  return (dispatch) => {
-    dispatch({
-      type: COUNT_PLUS,
-      payload: id
-    })
+  return {
+    type: COUNT_PLUS,
+    payload: id
   }
 }
 export function toggleSelected(id) {
-  return (dispatch) => {
-    dispatch({
-      type: TOGGLE_SELECTED,
-      payload: id
-    })
+  return {
+    type: TOGGLE_SELECTED,
+    payload: id
   }
 }

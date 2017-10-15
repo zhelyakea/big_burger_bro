@@ -1,0 +1,106 @@
+.service{
+  cursor: default;
+  width: 30%;
+  margin: 5px;
+  &__icon{
+    box-shadow: 0 0 45px grey;
+    vertical-align: top;
+    padding: 35%;
+    margin: 0;
+    border: 1px solid transparent;
+    &_selected {
+      background: #FFC107;
+      border: 1px solid #FFC107;
+      transition-duration: 0.5s;
+    }
+    &_donut {
+      background-image: url('../../../svg/donut.svg');
+      background-size: 100% 100%;
+    }
+    &_hotdog {
+      background-image: url('../../../svg/hotdog.svg');
+      background-size: 100% 100%;
+    }
+    &_soda {
+      background-image: url('../../../svg/soda.svg');
+      background-size: 100% 100%;
+    }
+    &_pizza {
+      background-image: url('../../../svg/pizza.svg');
+      background-size: 100% 100%;
+    }
+    &_burger {
+      background-image: url('../../../svg/burger.svg');
+      background-size: 100% 100%;
+    }
+    &_free {
+      background-image: url('../../../svg/free.svg');
+      background-size: 100% 100%;
+    }
+    &_icecream {
+      background-image: url('../../../svg/icecream.svg');
+      background-size: 100% 100%;
+    }
+    &_cofee {
+      background-image: url('../../../svg/cofee.svg');
+      background-size: 100% 100%;
+    }
+    &_sandwich {
+      background-image: url('../../../svg/sandwich.svg');
+      background-size: 100% 100%;
+    }
+    &_gyro {
+      background-image: url('../../../svg/gyro.svg');
+      background-size: 100% 100%;
+    }
+    &_burrito {
+      background-image: url('../../../svg/burrito.svg');
+      background-size: 100% 100%;
+    }
+  }
+  &__bottom{
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-around;
+    align-items: center;
+    margin: 5px 0px;
+    width: 100%;
+    box-shadow: 0 0 45px grey;
+  }
+  &__name{
+    flex: 1 0 10px;
+    font-size: 1em;
+    padding: 2.5%;
+    max-width: 60%;
+    &_selected{
+      color: white;
+      background: #26A69A;
+      border: 1px solid #30d0c1;
+      transition-duration: 0.4s;
+    }
+    &_unselected{
+      color: #26A69A;
+      background: white;
+      border: 1px solid #26A69A;
+      transition-duration: 0.5s;
+    }
+  }
+  &__cost{
+    flex: 1 0 10px;
+    font-size: 1em;
+    padding: 2.5%;
+    max-width: 60%;
+    &_unselected{
+      color: #26A69A;
+      background: white;
+      border: 1px solid #26A69A;
+      transition-duration: 0.5s;
+    }
+    &_selected{
+      color: white;
+      background: #FFA726;
+      border: 1px solid #ffbc59;
+      transition-duration: 0.3s;
+    }
+  }
+}

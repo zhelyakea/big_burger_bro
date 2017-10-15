@@ -4,8 +4,13 @@ var NpmInstallPlugin = require('npm-install-webpack-plugin')
 
 const config = {
   devtool: 'cheap-module-source-map',
+  resolve: {
+    alias: {
+      styles: path.resolve(__dirname + "/src/styles")
+    }
+  },
   entry: [
-    './src/index', './css/style.css'
+    './src/index'
   ],
   watch: true,
   output: {
@@ -38,6 +43,14 @@ const config = {
           'style-loader',
           'css-loader?importLoaders=1',
           'postcss-loader'
+        ]
+      },
+      {
+        test: /\.scss/,
+        loaders: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          'sass-loader'
         ]
       },
       {
