@@ -1,74 +1,61 @@
-var path = require('path')
-var webpack = require('webpack')
-var NpmInstallPlugin = require('npm-install-webpack-plugin')
+var path = require("path");
+var webpack = require("webpack");
+var NpmInstallPlugin = require("npm-install-webpack-plugin");
 
 const config = {
-  devtool: 'cheap-module-source-map',
+  devtool: "cheap-module-source-map",
   resolve: {
     alias: {
       styles: path.resolve(__dirname + "/src/styles")
     }
   },
-  entry: [
-    './src/index'
-  ],
+  entry: ["./src/index"],
   watch: true,
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    path: path.join(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/static/"
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new NpmInstallPlugin(),
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+      "process.env": {
+        NODE_ENV: JSON.stringify("production")
       }
-    }),
+    })
   ],
   module: {
     loaders: [
       {
-        loaders: ['babel-loader'],
-        include: [
-          path.resolve(__dirname, "src"),
-        ],
+        loaders: ["babel-loader"],
+        include: [path.resolve(__dirname, "src")],
         test: /\.js$/,
-        plugins: ['transform-runtime'],
+        plugins: ["transform-runtime"]
       },
       {
         test: /\.css$/,
         loaders: [
-          'style-loader',
-          'css-loader?importLoaders=1',
-          'postcss-loader'
+          "style-loader",
+          "css-loader?importLoaders=1",
+          "postcss-loader"
         ]
       },
       {
         test: /\.scss/,
-        loaders: [
-          'style-loader',
-          'css-loader?importLoaders=1',
-          'sass-loader'
-        ]
+        loaders: ["style-loader", "css-loader?importLoaders=1", "sass-loader"]
       },
       {
         test: /\.svg/,
-        loader: 'svg-url'
+        loader: "svg-url"
       }
     ]
   },
   postcss: () => {
-    return [
-      require('precss'),
-      require('postcss-cssnext'),
-    ];
+    return [require("precss"), require("postcss-cssnext")];
   }
+};
+if (process.env.NODE_ENV === "production") {
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
-if (process.env.NODE_ENV === 'production') {
-  config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin()
-  )
-}
-module.exports = config
+module.exports = config;

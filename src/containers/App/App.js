@@ -51,9 +51,6 @@ export default class App extends Component {
 		)
 	}
 }
-App.propTypes = {
-  page: PropTypes.object.isRequired
-};
 export default connect(({ page, routing }) => ({
   page,
   location: routing.locationBeforeTransitions.pathname
