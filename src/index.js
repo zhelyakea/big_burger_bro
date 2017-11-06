@@ -11,13 +11,6 @@ import App from "./containers/App";
 const store = configureStore();
 const history = syncHistoryWithStore(hashHistory, store);
 
-// require('../css/style.css')
-// require('../css/common.css')
-// require('../css/block.css')
-// require('../css/service.css')
-// require('../css/flex.css')
-// require('../css/svg.css')
-
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
